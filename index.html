@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chez Ella</title>
+    </head>
+
+    <header>
+
+        <img src="logo.png" alt="logo" 20px;>
+
+
+
+        <nav>
+
+            <button class="menu-item" data-kategori="alle">Menu</button>
+
+            <button class="menu-item" data-kategori="forretter">Forretter</button>
+
+            <button class="menu-item" data-kategori="hovedretter">Hovedretter</button>
+
+            <button class="menu-item" data-kategori="dessert_og_drikkevarer">Dessert og drikkevarer</button>
+
+
+        </nav>
+
+
+    </header>
+
+    <style>
+
+
+
+        header img{
+        margin-left: -35px;
+        width: 30px;
+        }
+
+
+        }
+        h2{
+        font-weight: 200;
+        }
+
+        nav, footer{
+        text-align: center;
+        padding: 50px;
+        font-weight: 200;
+            font-family: AmaticSC-Regular;
+
+        }
+
+        @font-face{
+            font-family: AmaticSC-Regular;
+            src: url(AmaticSC-Regular.ttf);
+        }
+
+   button {
+    background-color:lightgray;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-family: AmaticSC-Regular;
+
+
+        }
+
+        nav .menu-item{
+            font-size: 35px;
+
+      }
+
+
+
+
+        body {
+            background-color: palegoldenrod;
+            background-color: lightgray;
+;
+
+        }
+
+
+
+        article{
+            padding: 1em;
+            background-color: white;
+
+
+        }
+
+        .data-container article img {
+            width: 100%;
+        }
+
+        .data-container{
+            margin: 0 auto;
+            display: grid;
+
+
+        }
+
+        @media screen and (min-width:570px) {
+            .data-container, header img {
+                padding-left: 10%;
+                padding-right: 10%;
+                grid-gap: 12px;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+
+
+        #modal{
+
+            background-color: rgba(0,0,0,0.4);
+            width: 100vw;
+            height: 100vh;
+            top: 5px;
+            position: fixed;
+            text-align: center;
+            display: none;
+
+
+
+
+        }
+
+        #modal-content{
+            width: 70vw;
+            height: 90vh;
+            margin: auto;
+            background-color: rgba(250, 250, 250, 1);
+            padding: 10px;
+
+        }
+
+        #modal button{
+            background-color:  rgba(250, 250, 250, 1);
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
+
+        }
+
+        #modal.vis {
+
+            display: block;
+            opacity: 1;
+            pointer-events: all;
+
+
+
+        }
+
+        #modal img {
+            max-height: 60%;
+            max-width: 90%;
+        }
+
+
+
+
+    </style>
+
+
+<body>
+
+    <section id="modal">
+        <button>Close</button>
+        <div id="modal-content">
+            <h2 class="modal-navn"></h2>
+            <br>
+            <span class="modal-id"></span>
+            <span class="modal-kategori"></span>
+            <br> <span class="modal-pris"></span>
+            <br>
+            <span class="modal-langbeskrivelse"></span>
+            <br>
+            <br>
+            <img class="modal-billede" src="" alt="">
+        </div>
+    </section>
+
+
+    <main class="container">
+        <section class="data-container"></section>
+    </main>
+    <template class="data-template">
+      <article class="menu">
+          <h2></h2>
+          <img src="" alt=""><br>
+
+
+     <span class="data-langbeskrivelse"></span><br>
+        Pris: <span class="data-pris"></span><br>
+
+      </article>
+   </template>
+
+    <script>
+        let modal = document.querySelector("#modal");
+        let dest = document.querySelector(".data-container"),
+            retter,
+            kategoriFilter = "alle";
+
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        async function hentJson() {
+            let myJson = await fetch("menu.json");
+            retter = await myJson.json();
+
+            visRetter();
+        }
+
+
+        document.querySelectorAll(".menu-item").forEach(knap => {
+
+
+            knap.addEventListener("click", filtrering)
+        });
+
+
+        function filtrering() {
+            dest.textContent = "";
+            kategoriFilter = this.getAttribute("data-kategori");
+            visRetter();
+        }
+
+        function visRetter() {
+            let dest = document.querySelector(".data-container"),
+                temp = document.querySelector(".data-template");
+
+
+            //løb personlisten igennem og lav en klon
+            retter.forEach(ret => {
+
+                if (ret.kategori == kategoriFilter || kategoriFilter == "alle") {
+                    let klon = temp.cloneNode(true).content;
+                    //indsæt data i klonen
+
+
+                    klon.querySelector("h2").textContent = ret.navn;
+                    klon.querySelector("img").src = "imgs/small/" + ret.billede + "_sm.jpg";
+                    klon.querySelector("img").addEventListener("click", () => {
+                        visModal(ret);
+                    });
+
+
+                    // klon.querySelector(".data-kategori").textContent = ret.kategori;
+                    klon.querySelector(".data-pris").textContent = ret.pris;
+
+
+                    //placer klon i DOM
+                    dest.appendChild(klon);
+                }
+            })
+        }
+
+
+        function visModal(retten) {
+            modal.classList.add("vis");
+            modal.querySelector(".modal-id").textContent = retten.id;
+            modal.querySelector(".modal-kategori").textContent = retten.kategori;
+            modal.querySelector(".modal-navn").textContent = retten.navn;
+            modal.querySelector(".modal-pris").textContent = retten.pris;
+            modal.querySelector(".modal-langbeskrivelse").textContent = retten.langbeskrivelse;
+            modal.querySelector(".modal-billede").src = "imgs/medium/" + retten.billede + "_md.jpg";
+            modal.querySelector(".modal-billede").alt = "Foto af" + retten.billede;
+            modal.querySelector("button").addEventListener("click", skjulModal);
+        }
+
+        function skjulModal() {
+            modal.classList.remove("vis");
+        }
+    </script>
+
+    <footer> Chez Ella © 2018 <br> Lavet af Sarah Jane Brandt </footer>
+</body>
+
+</html>

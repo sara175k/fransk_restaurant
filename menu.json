@@ -1,0 +1,202 @@
+[{
+		"id": 1,
+		"kategori": "forretter",
+		"navn": "soupe à l'oignon",
+		"pris": 50,
+		"langbeskrivelse": "Klassisk fransk løgsuppe, brødcrouton og revet ost.",
+		"billede": "soupe_oignon"
+	},
+	{
+		"id": 2,
+		"kategori": "forretter",
+		"navn": "tomate farcie",
+		"pris": 49,
+		"langbeskrivelse": "Tomater med løg, salt, peber og timian. Kan serveres med ris.",
+		"billede": "tomate_farcie"
+	},
+	{
+		"id": 3,
+		"kategori": "forretter",
+		"navn": "foie gras",
+		"pris": 42,
+		"langbeskrivelse": "And eller gåselever sereveret på franskbrød. Kan serveres med konfiteret figner, og salat.",
+		"billede": "foie_gras"
+	},
+	{
+		"id": 4,
+		"kategori": "forretter",
+		"navn": "quiche lorraine",
+		"pris": 79,
+		"langbeskrivelse": "Saltet tærte baseret på æg, mælk, ost og skinke.  Vegetarisk udgave er tilgængeligt. Kan serveres med salat.",
+		"billede": "quiche_lorraine"
+	},
+	{
+		"id": 5,
+		"kategori": "forretter",
+		"navn": "tartare de boeuf",
+		"pris": 69,
+		"langbeskrivelse": "Finhakket oksekød serveres på rugbrød med løg, peber æggeblomme.",
+		"billede": "tartare"
+	},
+	{
+		"id": 6,
+		"kategori": "hovedretter",
+		"navn": "coq au vin",
+		"pris": 125,
+		"langbeskrivelse": "Kylling kogt i rødvin sammen med bacon, champignon og hvidløg. Årstidenssalat følger som tilbehør.",
+		"billede": "coq_au_vin"
+	},
+	{
+		"id": 7,
+		"kategori": "hovedretter",
+		"navn": "ratatouille",
+		"pris": 89,
+		"langbeskrivelse": "Stuvet rødløg, hvidløg, aubergine, courgette, peberfrugt, tomater. Serveres med brød.",
+		"billede": "ratatouille"
+	},
+	{
+		"id": 8,
+		"kategori": "hovedretter",
+		"navn": "gratin dauphinois",
+		"pris": 179,
+		"langbeskrivelse": "Kartofler bagt i mælk og ost. Kan serveres med årstidensgrøntsager eller frisk salat.",
+		"billede": "gratin_dauphinois"
+	},
+	{
+		"id": 9,
+		"kategori": "hovedretter",
+		"navn": "moules marinières",
+		"pris": 109,
+		"langbeskrivelse": "Muslinger kogt med fløde og hvidløg. Kan serveres med brød eller pommes frittes.",
+		"billede": "moules_mariniere"
+	},
+	{
+		"id": 10,
+		"kategori": "hovedretter",
+		"navn": "boeuf bourguignon",
+		"pris": 199,
+		"langbeskrivelse": "Bøf braseret i rødvin sammen med gulerødder, løg, hvidlød, champignon og perleløg. Kan serveres med brød, kartoffelmos eller ris. ",
+		"billede": "boeuf_bourguignon"
+	},
+	{
+		"id": 11,
+		"kategori": "dessert_og_drikkevarer",
+		"navn": "crème brûlée",
+		"pris": 139,
+		"langbeskrivelse": "Vanilje creme med karameliseret top, kan serveres med årstidens bær.",
+		"billede": "creme_brulee"
+	},
+	{
+		"id": 12,
+		"kategori": "dessert_og_drikkevarer",
+		"navn": "crêpe suzette",
+		"pris": 149,
+		"langbeskrivelse": "Pandekager serveret med karameliseret sovs, sukker, smør, appelsinsaft og liqueur til flambering.",
+		"billede": "crepes_suzette"
+	},
+	{
+		"id": 13,
+		"kategori": "dessert_og_drikkevarer",
+		"navn": "flans",
+		"pris": 60,
+		"langbeskrivelse": "Creme serveret med karamleliserede sovs.",
+		"billede": "flan"
+	},
+	{
+		"id": 14,
+		"kategori": "desserter_og_drikkevarer",
+		"navn": "île flottante",
+		"pris": 50,
+		"langbeskrivelse": "Meringues er baserede på piskede æggehvide, sukker og vanilje, og cremen er baseret på æggeblomme, vanilje og varm mælk.",
+		"billede": "ile_flottante"
+	},
+	{
+		"id": 15,
+		"kategori": "desserter_og_drikkevarer",
+		"navn": "mousse au chocolat",
+		"pris": 65,
+		"langbeskrivelse": "Chokolademousse serveret med et mynteblad og div. frugter.",
+		"billede": "mousse_au_chocolat"
+	},
+	{
+		"id": 16,
+		"kategori": "dessert_og_drikkevarer",
+		"navn": "vand",
+		"pris": 40,
+		"langbeskrivelse": null,
+        "billede": "glass_of_water"
+
+	},
+	{
+		"id": 17,
+		"kategori": "dessert_og_drikkevarer",
+		"navn": "rødvin",
+		"pris": 150,
+		"langbeskrivelse": "Pinot Noir",
+        "billede": "redwine"
+	},
+	{
+		"id": 18,
+		"kategori": "dessert_og_drikkevarer",
+		"navn": "hvidvin",
+		"pris": 140,
+		"langbeskrivelse": "Sauvignon blanc",
+        "billede": "whitewine"
+	},
+	{
+		"id": 19,
+		"kategori": "dessert_og_drikkevarer",
+		"navn": "champagne",
+		"pris": 150,
+		"langbeskrivelse": null,
+        "billede": "champagne"
+	},
+	{
+		"id": 20,
+		"kategori": "dessert_og_drikkevarer",
+		"navn": "jus de fruit",
+		"pris": 42,
+		"langbeskrivelse": "frugtjuice",
+        "billede": "juice"
+	},
+	{
+		"id": 21,
+		"kategori": "dessert_og_drikkevarer",
+		"navn": "café liégeois",
+		"pris": 40,
+		"langbeskrivelse": "Kold dessert baseret på letsødet kaffe, iskaffe og flødeskum.",
+		"billede": "cafe_liegeois"
+	},
+	{
+		"id": 22,
+		"kategori": "dessert_og_drikkevarer",
+		"navn": "café crème",
+		"pris": 42,
+		"langbeskrivelse": "Kaffe med mælk, serveres med sukker og kiks.",
+		"billede": "cafe_creme"
+	},
+	{
+		"id": 23,
+		"kategori": "dessert_og_drikkevarer",
+		"navn": "chocolat chaud",
+		"pris": 45,
+		"langbeskrivelse": "varm kakao",
+		"billede": "chocolat_chaud"
+	},
+	{
+		"id": 24,
+		"kategori": "dessert_og_drikkevarer",
+		"navn": "chocolat liégeois",
+		"pris": 45,
+		"langbeskrivelse": "Kold dessert baseret på letsødet kaffe, chokoladeis og flødeskum.",
+		"billede": "chocolat_liegeois"
+	},
+	{
+		"id": 25,
+		"kategori": "dessert_og_drikkevarer",
+		"navn": "espresso",
+		"pris": 35,
+		"langbeskrivelse": "stærk kaffe tilberedt under tryk.",
+		"billede": "espresso"
+	}
+]
